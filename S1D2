@@ -2,4 +2,10 @@ print(len("Hello"))  #counts the number of characters in the string "Hello"
 
 print("hello"[4])   #subscripting - when you want to access a specific character in a string
 
-print(123 + 345)
+print(123 + 345)    #Performs actual calculation and returns the sum of 123 and 345
+
+print(type(123))  #Returns the data type of the value 123, which is an integer
+print(type(1.1))
+print(type(True))
+print(type("butt"))
+
