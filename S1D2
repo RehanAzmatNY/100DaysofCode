@@ -1,0 +1,5 @@
+print(len("Hello"))  #counts the number of characters in the string "Hello"
+
+print("hello"[4])   #subscripting - when you want to access a specific character in a string
+
+print(123 + 345)
