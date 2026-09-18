@@ -9,3 +9,5 @@ print(type(1.1))
 print(type(True))
 print(type("butt"))
 
+print(6+4/2 - (1*2))
+
