@@ -9,7 +9,10 @@ else:
 
 #Comparison operators - > < >= <= == !=
 #Modulo operator - % (returns the remainder of a division)
-
 number_to_check = int(input("what is the number you want to check? "))
 
 print(number_to_check % 2) #returns 0 if even, 1 if odd
+if number_to_check % 2 == 0:
+    print("The number is EVEN.")
+else:
+    print("The number is ODD.")
