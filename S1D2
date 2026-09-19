@@ -11,3 +11,5 @@ print(type("butt"))
 
 print(6+4/2 - (1*2))
 
+#Tip calculator
+print("Welcome to the tip calculator!")
