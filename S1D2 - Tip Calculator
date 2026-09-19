@@ -20,4 +20,4 @@ diners = int(input("how many diners are splitting the bill?"))
 tip_amount = bill * (tip / 100)
 total_with_tip = bill + tip_amount
 per_person = total_with_tip / diners
-print(f"Each person should pay: ${per_person:.2f}")
+print(f"Each person should pay: ${per_person:.2f}") #note that the .2f rounds to 2 decimal places
