@@ -1,19 +1,6 @@
-import random as _random
+import random                        #random module is responsible for generating random numbers                
+import My_Module 
 
-
-class random:
-	"""Useful random-value helpers for the exercise."""
-
-	@staticmethod
-	def randint(start, end):
-		"""Return a random integer between start and end, inclusive."""
-		return _random.randint(start, end)
-
-	@staticmethod
-	def choice(values):
-		"""Return one randomly selected item from values."""
-		return _random.choice(values)
-
-
-random_integer = random.randint(1, 10)
-print(random_integer)
+random_integer = random.randint(1,10) #random numbers from 1-10
+print(random_integer)                #python module is responsible for a different piece of functionality
+print(My_Module.my_favorite_number)  #importing a module allows you to use the functions and variables defined in that module
