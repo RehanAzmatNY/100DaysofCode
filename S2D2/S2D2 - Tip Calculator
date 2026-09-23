@@ -1,0 +1,23 @@
+print(len("Hello"))  #counts the number of characters in the string "Hello"
+
+print("hello"[4])   #subscripting - when you want to access a specific character in a string
+
+print(123 + 345)    #Performs actual calculation and returns the sum of 123 and 345
+
+print(type(123))  #Returns the data type of the value 123, which is an integer
+print(type(1.1))
+print(type(True))
+print(type("butt"))
+
+print(6+4/2 - (1*2))
+
+#Tip calculator
+print("Welcome to the tip calculator!")
+bill = float(input("what is the total amount of your bill? $"))
+tip = int(input("enter deseired tip percentage (20, 25, 30):"))
+diners = int(input("how many diners are splitting the bill?"))
+
+tip_amount = bill * (tip / 100)
+total_with_tip = bill + tip_amount
+per_person = total_with_tip / diners
+print(f"Each person should pay: ${per_person:.2f}") #note that the .2f rounds to 2 decimal places
