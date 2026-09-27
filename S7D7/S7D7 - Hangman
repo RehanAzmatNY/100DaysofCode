@@ -2,10 +2,11 @@ import random
 word_list = ["ardvark", "baboon", "camel"]  # List of words to choose from
 
 #To Do 1 - Ramdomly choose the word from the word list and assign it to a variable called chosen_word
+chosen_word = random.choice(word_list)
 placeholder = ""  # Placeholder for the chosen word
 word_length = len(chosen_word)  # Get the length of the chosen word
-for position in range(6):  # Loop through the range of 6 (length of the longest word in the list)
-chosen_word = random.choice(word_list)
+for position in range(word_length):  # Loop through the range of the word length
+    placeholder += "_"
 print(chosen_word)
 
 #To Do 2 - Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
