@@ -1,0 +1,22 @@
+import random
+word_list = ["ardvark", "baboon", "camel"]  # List of words to choose from
+
+#To Do 1 - Ramdomly choose the word from the word list and assign it to a variable called chosen_word
+placeholder = ""  # Placeholder for the chosen word
+word_length = len(chosen_word)  # Get the length of the chosen word
+for position in range(6):  # Loop through the range of 6 (length of the longest word in the list)
+chosen_word = random.choice(word_list)
+print(chosen_word)
+
+#To Do 2 - Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
+guess = input("Guess a letter: ").lower()   #input() function is used to take input from the user and .lower() method is used to convert the input to lowercase
+display = []                                # Create an empty list to represent the word with underscores
+for _ in range(len(chosen_word)):           #Loop through each letter in the chosen word
+    display.append("_")                     # Append an underscore to the display list for each letter in the chosen word
+print(display)
+
+#To Do 3 - Check if the letter the user guessed (guess) is one of the letters in teh chosen_word.  Print "right"if it is and "wrong" if it is not.
+if guess in chosen_word:                    # Check if the guessed letter is in the chosen word
+    print("Right")                           # Print "Right" if the guess is correct
+else:
+    print("Wrong")                           # Print "Wrong" if the guess is incorrect
