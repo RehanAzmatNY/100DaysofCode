@@ -1,23 +1,44 @@
 import random
-word_list = ["ardvark", "baboon", "camel"]  # List of words to choose from
+word_list = ["apple", "banana", "python", "computer", "science", "hangman"]     # List of words to choose from since import wasn't working
 
-#To Do 1 - Ramdomly choose the word from the word list and assign it to a variable called chosen_word
-chosen_word = random.choice(word_list)
-placeholder = ""  # Placeholder for the chosen word
-word_length = len(chosen_word)  # Get the length of the chosen word
+chosen_word = random.choice(word_list)  # Randomly choose a word from the word list
+placeholder = ""                     # Placeholder for the chosen word
+word_length = len(chosen_word)      # Get the length of the chosen word
 for position in range(word_length):  # Loop through the range of the word length
     placeholder += "_"
 print(chosen_word)
+print(placeholder)
 
-#To Do 2 - Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
-guess = input("Guess a letter: ").lower()   #input() function is used to take input from the user and .lower() method is used to convert the input to lowercase
-display = []                                # Create an empty list to represent the word with underscores
-for _ in range(len(chosen_word)):           #Loop through each letter in the chosen word
-    display.append("_")                     # Append an underscore to the display list for each letter in the chosen word
-print(display)
+#To Do 1 - Ramdomly choose the word from the word list and assign it to a variable called chosen_word
+lives = 6                               # Set the number of lives the player has, in this case its 6
+game_over = False
+correct_letters = []                            # List to keep track of correct letters guessed
+while not game_over:
+    guess = input("Guess a letter: ").lower()   # input() function is used to take input from the user and .lower() method is used to convert the input to lowercase
+    display = ""                               # Create an empty string to represent the word with underscores
 
-#To Do 3 - Check if the letter the user guessed (guess) is one of the letters in teh chosen_word.  Print "right"if it is and "wrong" if it is not.
-if guess in chosen_word:                    # Check if the guessed letter is in the chosen word
-    print("Right")                           # Print "Right" if the guess is correct
-else:
-    print("Wrong")                           # Print "Wrong" if the guess is incorrect
+    # To Do 2 - Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
+    for letter in chosen_word:                  # Loop through each letter in the chosen word
+        if letter == guess:                    # If the guessed letter matches, show it
+            display += letter
+            correct_letters.append(guess)        # Add the correct letter to the list of correct letters
+        elif letter in correct_letters: 
+                                                  # If the letter is in the list of correct letters, show it
+            display += letter
+        else:                                  # Otherwise, keep it hidden
+            display += "_"
+    print(display)
+
+    if "_" not in display:                     # Check if there are no underscores left in the display string
+        game_over = True
+        print("You win.")
+
+    # To Do 3 - Check if the letter the user guessed (guess) is one of the letters in the chosen_word. Print "right" if it is and "wrong" if it is not.
+    if guess in chosen_word:                  # Check if the guessed letter is in the chosen word
+        print("Right")                        # Print "Right" if the guess is correct
+    else:
+        print("Wrong")                        # Print "Wrong" if the guess is incorrect
+        lives -= 1                            # Decrease the number of lives
+        if lives == 0:                        # Check if the player has no more lives
+            game_over = True                  # End the game
+            print("You lose.")                # Print "You lose." if the player runs out of lives
