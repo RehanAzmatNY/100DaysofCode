@@ -1,0 +1,27 @@
+def life_in_weeks(age):
+    """
+    This function takes an age in years and calculates the remaining weeks, months, and days
+    until the age of 90. It then prints out the results in a formatted string.
+    
+    Parameters:
+    age (int): The current age of the person in years.
+    
+    Returns:
+    None
+    """
+    # Constants for calculations
+    total_years = age
+    weeks_in_a_year = 52
+    months_in_a_year = 12
+    days_in_a_year = 365
+    
+    # Calculate remaining years, weeks, months, and days
+    remaining_years = total_years - {age}
+    remaining_weeks = remaining_years * weeks_in_a_year
+    remaining_months = remaining_years * months_in_a_year
+    remaining_days = remaining_years * days_in_a_year
+
+    #call function
+    life_in_weeks(25)  # Example call to the function with age 25
+    # Print the results
+    print(f"You have {remaining_weeks} weeks, {remaining_months} months, and {remaining_days} days left until you turn 90.")

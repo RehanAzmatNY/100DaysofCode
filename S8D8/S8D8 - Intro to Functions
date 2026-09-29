@@ -1,0 +1,16 @@
+def function_test():
+    print("This is a test function.")
+    print("It demonstrates how to define and call a function in Python.")
+    print("Functions help organize code into reusable blocks.")
+
+    # something = 123       Something is the parameter passed into the function, 123 is the arguement passed into the function. The parameter is a variable that is used to accept the value passed into the function when it is called. The argument is the actual value that is passed into the function when it is called.
+
+    #call the function
+function_test()
+
+#An example of a function that takes parameters
+def greet_with_name(name):
+    print(f"Hello, {name}! Welcome to the function demonstration.")  # Call the function with a name. The f-string allows us to insert the variable 'name' into the string.
+
+
+greet_with_name("Alice")  # Call the function with the name "Alice"
