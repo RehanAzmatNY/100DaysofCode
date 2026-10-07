@@ -1,0 +1,16 @@
+#love calculator
+def calculate_love_score():
+    name1 = input("Enter the first name: ")        #gets the input from the user for the first name
+    name2 = input("Enter the second name: ")      #gets the input from the user for the second name
+
+    combined_names = name1.lower() + name2.lower()     #combines both names and converts them to lowercase for uniformity
+    love_score = 0
+
+    for char in combined_names:                    
+        if char in 'aeiou':                          #calculates the love score based on the vowels in their names
+            love_score += 5
+        elif char in 'bcdfghjklmnpqrstvwxyz':       #calculates the love score based on the consonants in their names
+            love_score += 3
+
+    love_score = love_score % 100                   # Ensure the score is calculated between 0 and 99
+    print(f"The love score between {name1} and {name2} is: {love_score}%")      #outputs the love score between the two names
